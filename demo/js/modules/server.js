@@ -5,7 +5,7 @@ const postData = (url, data) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({url: document.URL, clicks: data}),
+    body: data,
   });
 };
 

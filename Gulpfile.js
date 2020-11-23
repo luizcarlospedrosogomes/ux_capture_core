@@ -23,7 +23,7 @@ function browserSync(cb) {
 
 function watchFiles(cb) {
     console.log("watchFiles")
-    watch([ 'src/*', '!node_modules/**'], copy);
+    watch([ 'src/**/*', '!node_modules/**'], parallel(copy));
     //cb();
 }
 

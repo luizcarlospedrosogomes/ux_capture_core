@@ -15,8 +15,9 @@ export default class Clickstream {
     this.clickstream = trackClickstream();
   }
   
-  post() {    
-    postData(this.url+"/click", this.clickstream);
+  post() {   
+    const data = JSON.stringify({url: document.URL, clicks: this.clickstream}); 
+    postData(this.url+"/click", data);
   }
   
   async get() {
@@ -27,5 +28,4 @@ export default class Clickstream {
     this.data = await this.get();
     if (this.data.length) paintHeatmap(this.data.flat(), max);
   }
-
 }
