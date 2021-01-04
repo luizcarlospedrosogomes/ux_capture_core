@@ -5,8 +5,8 @@ const sync = require("browser-sync").create();
 
 function copy(cb) {
     console.log("copy")
-    src('src/**/*.js')
-        .pipe(dest('demo/js'));
+    src('src/**/*.js').pipe(dest('demo'));
+    src('src/**/*.js').pipe(dest('./../nodes/clickstream/public/'));
     cb();
 }
 

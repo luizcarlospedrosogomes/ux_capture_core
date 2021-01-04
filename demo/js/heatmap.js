@@ -1,7 +1,7 @@
 import {require, screenShot, logo} from "./modules/util.js";
 import Clickstream from "./Clickstream.js";
 
-require("/js/modules/html2canvas.min.js");
+require("modules/html2canvas.min.js");
 
 
 const urlAPI = "http://localhost:9000/api"

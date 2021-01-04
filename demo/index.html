@@ -9,7 +9,25 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   
-    <title>React App</title>
+	<title>React App</title>
+	<!-- Hotjar Tracking Code for spro.com.br -->
+	<script>
+		// (function(h,o,t,j,a,r){
+		(function(window, document, api, file, a, r){
+			window.openux=window.openux||function(){
+				(window.openux.q=window.openux.q||[]).push(arguments)};
+				window.openux={id:1955757,v:6};
+				console.log(window.openux)
+				a=document.getElementsByTagName('head')[0];
+				r=document.createElement('script');
+				r.async=1;
+				r.type="module" 
+				r.src=api+file+"?id="+window.openux.id+"&v"+window.openux.v;
+				
+				console.log(r)
+				a.appendChild(r);
+		})(window,document,'http://localhost:9000/', 'heatmap.js');
+	</script>
   </head>
   <body>
       
@@ -164,6 +182,6 @@
 	<footer>
 		<p>Copyright 2009 Your name</p>
 	</footer>
-    <script type="module" src="./js/script.js"></script>
+    
   </body>
 </html>
